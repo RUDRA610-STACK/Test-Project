@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 plugin={"pretty","html:target/HtmlReports/report.html",
 		"json:target/JsonReports/report.json",
 		"junit:target/JunitReports/report.xml"},
-tags="@sanity or @smoke and @important"
+tags="@tag1"
 
 
 		)
