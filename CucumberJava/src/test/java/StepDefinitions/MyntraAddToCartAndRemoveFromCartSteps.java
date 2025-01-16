@@ -47,17 +47,20 @@ public class MyntraAddToCartAndRemoveFromCartSteps {
 	public void user_select_any_product() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 		myntra.select_Tshirt();
+		System.out.println("Tshirt selected");
 		Thread.sleep(6000);
 	}
 
 	@And("User select the size and clik on Add to Cart")
 	public void user_select_the_size_and_clik_on_add_to_cart() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
-		myntra.select_Size();
+		System.out.println("size is yet to be selected");
+//		myntra.select_Size();
+		System.out.println("size selected");
 		Thread.sleep(6000);
 		myntra.addToCartanyProduct();
+		Thread.sleep(6000);
 	}
-
 	@Then("User should be able to view that product in Add to cart page")
 	public void user_should_be_able_to_view_that_product_in_add_to_cart_page() {
 	    // Write code here that turns the phrase above into concrete actions

@@ -1,5 +1,6 @@
 package pageFactory;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -15,9 +16,9 @@ public class MyntraHomePage_PF {
 	WebElement men_Tshirt;
 	@FindBy(xpath="//img[@class='img-responsive']")
 	WebElement select_Tshirt;
-	@FindBy(xpath="//button/p[@class='size-buttons-unified-size']")
+	@FindBy(xpath="//div[@class='size-buttons-size-buttons']/div[2]/div[1]/button")
 	WebElement select_Size;
-	@FindBy(xpath="//p[@class='size-buttons-unified-size']")
+	@FindBy(xpath="//div[@class='']/div/div[1]/span")
 	WebElement addToCart_button;
 	@FindBy(xpath="//span[@class='myntraweb-sprite pdp-whiteBag sprites-whiteBag pdp-flex pdp-center']")
 	WebElement cart;
@@ -36,8 +37,9 @@ public class MyntraHomePage_PF {
 		this.driver=drive;
 		PageFactory.initElements(drive, this);
 	}
+	Actions action;
 	public void hoverOnMenCollection() {
-		Actions action=new Actions(driver);
+		action=new Actions(driver);
 		action.moveToElement(men_Collection).build().perform();
 	}
 	public void men_Tshirt() {
@@ -47,6 +49,9 @@ public class MyntraHomePage_PF {
 		select_Tshirt.click();
 	}
 	public void select_Size() {
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", addToCart_button);
+		action.moveToElement(select_Size).build().perform();
 		select_Size.click();
 	}
 	public String tshirt_Name() {
@@ -54,6 +59,7 @@ public class MyntraHomePage_PF {
 		return tshirt_name;
 	}
 	public void addToCartanyProduct() {
+		action.moveToElement(addToCart_button).build().perform();
 		addToCart_button.click();
 	}
 	public void removeFromCart() {
