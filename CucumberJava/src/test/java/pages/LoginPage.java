@@ -11,6 +11,7 @@ public class LoginPage {
 	WebDriver driver;
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
+		//constructor declaration
 	}
 	public void enter_Username(String username) {
 		driver.findElement(txt_username).sendKeys(username);
