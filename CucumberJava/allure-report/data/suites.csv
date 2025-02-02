@@ -1,0 +1,23 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"    Given
+    When
+    Then","1","Sample 1","","Sun Jan 19 21:23:46 IST 2025","passed","Sun Jan 19 21:23:46 IST 2025","","Verify the execution flow by using tags","Sample 1",""
+"    Given
+    When
+    Then","1","Sample 2","","Sun Jan 19 21:23:46 IST 2025","passed","Sun Jan 19 21:23:46 IST 2025","","Verify the execution flow by using tags","Sample 2",""
+"    Given
+    When
+    Then","0","Sample 6","","Sun Jan 19 21:23:46 IST 2025","passed","Sun Jan 19 21:23:46 IST 2025","","Verify the execution flow by using tags","Sample 6",""
+"    Given
+    When
+    Then","0","Sample 5","","Sun Jan 19 21:23:46 IST 2025","passed","Sun Jan 19 21:23:46 IST 2025","","Verify the execution flow by using tags","Sample 5",""
+"","70869","Validate Add to Cart and remove from cart button functionality","","Sun Jan 19 21:22:22 IST 2025","broken","Sun Jan 19 21:23:32 IST 2025","","Validate Add to Cart and Remove from Cart functionality","Validate Add to Cart and remove from cart button functionality",""
+"","3756","Validate the login button with valid credentials","","Sun Jan 19 21:23:32 IST 2025","passed","Sun Jan 19 21:23:36 IST 2025","","Validate the login button with parameterization","Validate the login button with valid credentials",""
+"","10091","Validate the login button with valid credentials","","Sun Jan 19 21:23:36 IST 2025","passed","Sun Jan 19 21:23:46 IST 2025","","Validate the login button with parameterization","Validate the login button with valid credentials",""
+"    Given
+    When
+    Then","0","Sample 3","","Sun Jan 19 21:23:46 IST 2025","passed","Sun Jan 19 21:23:46 IST 2025","","Verify the execution flow by using tags","Sample 3",""
+"    Given
+    When
+    Then","0","Sample 4","","Sun Jan 19 21:23:46 IST 2025","passed","Sun Jan 19 21:23:46 IST 2025","","Verify the execution flow by using tags","Sample 4",""
+"","8712","Validate login button with valid credentials","","Mon Jan 27 00:51:47 IST 2025","passed","Mon Jan 27 00:51:55 IST 2025","","Validate the Login page","Validate login button with valid credentials",""
