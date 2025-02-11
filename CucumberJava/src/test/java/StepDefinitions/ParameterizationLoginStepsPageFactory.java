@@ -1,7 +1,9 @@
 package StepDefinitions;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,14 +12,13 @@ import pageFactory.LoginPage_PF;
 public class ParameterizationLoginStepsPageFactory {
 	WebDriver driver=null;
 	LoginPage_PF login;
-	@SuppressWarnings("deprecation")
 	@Given("Browser is opened")
 	public void browser_is_opened() {
 	    // Write code here that turns the phrase above into concrete actions
 	    String driverPath=System.getProperty("user.dir");
 	    System.setProperty("webdriver.chrome.driver", driverPath+"/src/test/resources/Drivers/chromedriver.exe");
 	    driver=new ChromeDriver();
-	    driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	    driver.manage().window().maximize();
 	}
 

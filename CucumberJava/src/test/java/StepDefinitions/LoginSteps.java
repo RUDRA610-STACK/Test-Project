@@ -1,29 +1,25 @@
 package StepDefinitions;
 
 import java.io.IOException;
-import java.time.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.openqa.selenium.By;
+
+import hooks.BrowserManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utilities.ReadPropertiesFile;
 
-public class LoginSteps {
-	WebDriver driver=null;
+public class LoginSteps extends BrowserManager {
+	BrowserManager manager=new BrowserManager();
 	@Given("User navigate to login page URL")
 	public void user_navigate_to_login_page_url() throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
-		String project_path=System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver", project_path+"/src/test/resources/Drivers/chromedriver.exe");
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		System.out.println(driver);
+		System.out.println("before start execution");
 		System.out.println(ReadPropertiesFile.getLogInUrl());
-		driver.get(ReadPropertiesFile.getLogInUrl());
+		manager.navigateToURL(ReadPropertiesFile.getLogInUrl());
 		System.out.println("User is on login page");	
 	}
 
@@ -57,9 +53,6 @@ public class LoginSteps {
 		else {
 			System.out.println("Invalid Credentials");
 		}
-		driver.close();
-		driver.quit();
-	    
 	}
 
 }
