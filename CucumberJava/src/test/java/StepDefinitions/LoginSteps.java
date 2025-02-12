@@ -3,6 +3,7 @@ package StepDefinitions;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import hooks.BrowserManager;
 import io.cucumber.java.en.And;
@@ -11,15 +12,15 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utilities.ReadPropertiesFile;
 
-public class LoginSteps extends BrowserManager {
-	BrowserManager manager=new BrowserManager();
+public class LoginSteps {
+	WebDriver driver=BrowserManager.driver;
 	@Given("User navigate to login page URL")
 	public void user_navigate_to_login_page_url() throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
 		System.out.println(driver);
 		System.out.println("before start execution");
 		System.out.println(ReadPropertiesFile.getLogInUrl());
-		manager.navigateToURL(ReadPropertiesFile.getLogInUrl());
+		driver.get(ReadPropertiesFile.getLogInUrl());
 		System.out.println("User is on login page");	
 	}
 
